@@ -23,9 +23,8 @@ const Weatherapp = (() => {
     fetch(api,{
     mode: 'no-cors'})
       .then(response => {
-        return response.JSON();
-      })
-      .then(data => {
+      const data = response.json();
+        console.log(data);
         let alertTitle = '';
         let alertRegions = '';
         if (data.alerts) {
@@ -58,6 +57,8 @@ const Weatherapp = (() => {
         currentIcon = icon.replace(/-/g, '_').toUpperCase();
         skycons.play();
         skycons.set(icon, Skycons[currentIcon]);
+
+        console.log('weather loaded!!');
       });
   };
   const getTime = () => {
