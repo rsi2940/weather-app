@@ -1,15 +1,13 @@
 const Weatherapp = (() => {
   const init = async () => {
-    console.log('in init');
     let lat;
     let long;
-    const proxy = `https://cors-anywhere.herokuapp.com/`; // enable cors
     let api = ``;
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(position => {
         lat = position.coords.latitude;
         long = position.coords.longitude;
-        api = `${proxy}https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
+        api = `https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
         getApi(api);
       });
     }
@@ -27,7 +25,6 @@ const Weatherapp = (() => {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         let alertTitle = '';
         let alertRegions = '';
         if (data.alerts) {
@@ -60,8 +57,6 @@ const Weatherapp = (() => {
         currentIcon = icon.replace(/-/g, '_').toUpperCase();
         skycons.play();
         skycons.set(icon, Skycons[currentIcon]);
-
-        console.log('weather loaded!!');
       });
   };
   const getTime = () => {
@@ -86,6 +81,5 @@ const Weatherapp = (() => {
   };
 })();
 $(document).ready(function() {
-  console.log('init');
   Weatherapp.init();
 });
