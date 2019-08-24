@@ -1,14 +1,16 @@
 const Weatherapp = (() => {
   const init = async () => {
+    console.log('in init');
     let lat;
     let long;
+    const proxy = `https://cors-anywhere.herokuapp.com/`; // enable cors
     let api = ``;
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(position => {
-        lat = position.coords.latitude;
-        long = position.coords.longitude;
+        lat = position.coords.latitude.toString();
+        long = position.coords.longitude.toString();
         console.log(lat, long);
-        api = `https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
+        api = `${proxy}https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
         getApi(api);
       });
     }
@@ -21,15 +23,12 @@ const Weatherapp = (() => {
     }, 1000);
   };
   const getApi = api => {
-    fetch({
-    url: api,
-      mode: 'no-cors'
-    })
-      .then( response => {
-      console.log(response);
-      return response.json();})
-      .then ( data=> {
-              console.log(data);
+    fetch(api)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
         let alertTitle = '';
         let alertRegions = '';
         if (data.alerts) {
@@ -88,5 +87,6 @@ const Weatherapp = (() => {
   };
 })();
 $(document).ready(function() {
+  console.log('init');
   Weatherapp.init();
 });
