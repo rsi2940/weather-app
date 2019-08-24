@@ -19,10 +19,10 @@ const Weatherapp = (() => {
       getTime();
     }, 1000);
   };
-  const getApi = async api => {
+  const getApi = api => {
     fetch(api,{
     mode: 'no-cors'})
-      .then(response => {
+      .then(async response => {
       const data = await response.json();
         console.log(data);
         let alertTitle = '';
