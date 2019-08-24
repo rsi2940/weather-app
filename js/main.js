@@ -1,6 +1,6 @@
 const Weatherapp = (() => {
+  let refreshCounter = 0;
   const init = async () => {
-    console.log('in init');
     let lat;
     let long;
     const proxy = `https://cors-anywhere.herokuapp.com/`; // enable cors
@@ -9,15 +9,18 @@ const Weatherapp = (() => {
       await navigator.geolocation.getCurrentPosition(position => {
         lat = position.coords.latitude.toString();
         long = position.coords.longitude.toString();
-        console.log(lat, long);
         api = `${proxy}https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
         getApi(api);
       });
     }
     getTime();
     setInterval(() => {
+      refreshCounter++;
+      if (refreshCounter > 0) {
+        location.reload();
+      }
       getApi(api);
-    }, 15 * 60 * 1000);
+    }, 60 * 60 * 1000);
     setInterval(() => {
       getTime();
     }, 1000);
@@ -28,7 +31,6 @@ const Weatherapp = (() => {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         let alertTitle = '';
         let alertRegions = '';
         if (data.alerts) {
@@ -61,8 +63,6 @@ const Weatherapp = (() => {
         currentIcon = icon.replace(/-/g, '_').toUpperCase();
         skycons.play();
         skycons.set(icon, Skycons[currentIcon]);
-
-        console.log('weather loaded!!');
       });
   };
   const getTime = () => {
