@@ -530,6 +530,5 @@ const NepaliDate = (() => {
   };
 })();
 $(document).ready(function() {
-  console.log('init-dc');
   NepaliDate.init();
 });
