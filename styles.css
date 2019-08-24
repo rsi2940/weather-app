@@ -46,7 +46,7 @@ html {
 }
 .date-box {
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -227,5 +227,19 @@ html {
     position: fixed;
     bottom: 0px;
     right: 0px;
+  }
+  .weather-box {
+    justify-content: center;
+    font-size: 30px;
+  }
+  .weather-summary {
+    font-size: 2.5rem;
+  }
+  .weather-alert {
+    font-size: 1.5rem;
+  }
+  .temp,
+  .temp-type {
+    font-size: 4.75rem;
   }
 }
