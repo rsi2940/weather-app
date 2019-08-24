@@ -10,6 +10,7 @@ html {
 }
 .container {
   height: 100vh;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,6 +135,9 @@ html {
   right: 0px;
   padding: 10px;
   font-size: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .powered-by a {
   text-decoration: none;
@@ -149,12 +153,9 @@ html {
     bottom: 0px;
   }
 }
-@media screen and (max-width: 1024) {
-  body {
-    display: none;
-  }
-  .text-align-right,
-  .text-align-center-tab {
+@media screen and (max-width: 1024px) {
+  .align-right,
+  .align-center-tab {
     text-align: center;
   }
   .english-date-time {
@@ -170,32 +171,32 @@ html {
     align-items: center;
   }
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .english-time,
+  .nepali-time {
+    font-size: 2.25rem;
+  }
+  .nepali-date-time,
+  .english-date-time {
+    max-width: 25ch;
+  }
   .row1 {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  .weather-summary {
-    font-size: 1.5rem;
-  }
-  .block1 {
-    padding: 20px;
-  }
-  .block2 {
-    padding: 20px;
-  }
-  .weather-days {
-    font-size: 0.9rem;
-  }
-  .container {
-    height: 130vh;
-  }
+}
+@media screen and (max-width: 420px) {
   html {
     font-size: 20px;
   }
-}
-@media screen and (max-width: 500px) {
-  html {
-    font-size: 10px;
+  .powered-by {
+    flex-direction: column;
+    align-items: center;
+  }
+  .powered-by .dark-sky {
+    padding-top: 10px;
   }
 }

@@ -13,6 +13,14 @@ const Weatherapp = (() => {
         getApi(api);
       });
     }
+    const date = new Date();
+    const today = new Intl.DateTimeFormat('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }).format(date);
+    $('.english-date').html(today);
     getTime();
     setInterval(() => {
       refreshCounter++;
@@ -73,13 +81,6 @@ const Weatherapp = (() => {
       hour: '2-digit',
       minute: '2-digit'
     });
-    const today = new Intl.DateTimeFormat('en-US', {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric'
-    }).format(now);
-    $('.english-date').html(today);
     $('.english-time').html(currentTimeStr);
   };
   return {
