@@ -23,7 +23,7 @@ const Weatherapp = (() => {
     fetch(api,{
     mode: 'no-cors'})
       .then(response => {
-        return response.json();
+        return response.JSON();
       })
       .then(data => {
         let alertTitle = '';
