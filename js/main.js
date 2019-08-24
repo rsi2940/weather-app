@@ -24,7 +24,7 @@ const Weatherapp = (() => {
     mode: 'no-cors',
     body: JSON.stringify(data)})
       .then(async response => {
-      const data = await response;
+      const data = await response.json();
       return data; })
       .then ( data=> {
               console.log(data);
