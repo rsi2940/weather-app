@@ -21,11 +21,11 @@ const Weatherapp = (() => {
   };
   const getApi = api => {
     fetch(api,{
-    mode: 'no-cors',
-    body: JSON.stringify()})
-      .then(async response => {
-      const data = await response.json();
-      return data; })
+      method:'GET'
+    mode: 'no-cors'})
+      .then( response => {
+      console.log(response);
+      return response.json();})
       .then ( data=> {
               console.log(data);
         let alertTitle = '';
