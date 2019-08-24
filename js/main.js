@@ -7,6 +7,7 @@ const Weatherapp = (() => {
       await navigator.geolocation.getCurrentPosition(position => {
         lat = position.coords.latitude;
         long = position.coords.longitude;
+        console.log(lat, long);
         api = `https://api.darksky.net/forecast/73e0910b09c7698c62b4dbb11b6cf77f/${lat},${long}`;
         getApi(api);
       });
