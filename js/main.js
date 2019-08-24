@@ -20,7 +20,8 @@ const Weatherapp = (() => {
     }, 1000);
   };
   const getApi = api => {
-    fetch(api)
+    fetch(api,{
+    mode: 'no-cors'})
       .then(response => {
         return response.json();
       })
