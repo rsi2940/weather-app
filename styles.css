@@ -24,7 +24,7 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: rgb(5, 103, 117);
   background: -moz-linear-gradient(
@@ -72,12 +72,12 @@ html {
   text-shadow: 0 0 25px black;
 }
 .weather-box {
-  /* height: 100%; */
+  flex: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   animation-name: introduction;
   animation-duration: 2s;
@@ -128,7 +128,7 @@ html {
   color: white;
   text-transform: capitalize;
   font-size: 0.75rem;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .weather-days {
   display: flex;
@@ -138,13 +138,6 @@ html {
   font-size: 0.7rem;
   width: 50%;
 }
-/* .block1,
-.block2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 .powered-by {
   color: white;
   padding: 10px;
@@ -172,17 +165,13 @@ html {
   .align-center-tab {
     text-align: center;
   }
-  .english-date-time {
-    padding-top: 50px;
-  }
-  .container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   .date-box {
     flex-direction: column;
     align-items: center;
+  }
+  .row1 {
+    width: 90%;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1230px) and (max-width: 1455px) {
@@ -200,9 +189,18 @@ html {
     font-size: 25px;
     line-height: 1.5;
   }
-  .english-time,
-  .nepali-time {
+  .row1 {
+    padding-top: 20px;
+    width: 80%;
+  }
+  .row1 .weather-summary {
+    padding-top: 10px;
+  }
+  .english-time {
     font-size: 2.25rem;
+  }
+  .nepali-time {
+    font-size: 2rem;
   }
   .nepali-date-time,
   .english-date-time {
@@ -224,7 +222,7 @@ html {
     padding-top: 10px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .powered-by {
     position: fixed;
     bottom: 0px;
