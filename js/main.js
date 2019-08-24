@@ -19,11 +19,11 @@ const Weatherapp = (() => {
       getTime();
     }, 1000);
   };
-  const getApi = api => {
+  const getApi = async api => {
     fetch(api,{
     mode: 'no-cors'})
       .then(response => {
-      const data = response.json();
+      const data = await response.json();
         console.log(data);
         let alertTitle = '';
         let alertRegions = '';
