@@ -22,9 +22,7 @@ const NepaliDate = (() => {
       '/' +
       nepaliTime.getDate();
     const todayNepali = dateConverter(todayForNepali); // accepts yyyy/mm/dd
-    const todayNepaliStr = `${todayNepali.ne.strDayOfWeek}, ${
-      todayNepali.ne.strMonth
-    } ${todayNepali.ne.day}, ${todayNepali.ne.year}`;
+    const todayNepaliStr = `${todayNepali.ne.strDayOfWeek}, ${todayNepali.ne.strMonth} ${todayNepali.ne.day}, ${todayNepali.ne.year}`;
     $('.nepali-date').html(todayNepaliStr);
     nepaliCurrentTime();
     setInterval(() => {
@@ -53,19 +51,17 @@ const NepaliDate = (() => {
       }
     };
     const currentNepaliTimeStr = () => {
-      const nepTime = nepaliTimeC.toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit'
+      let nepTime = nepaliTimeC.toLocaleTimeString();
+      const timeArr = nepTime.split(':');
+      timeArr[0] < 10
+        ? (nepTime = `0${timeArr[0]}:${timeArr[1]}`)
+        : (nepTime = `${timeArr[0]}:${timeArr[1]}`);
+      let arrNumNe = nepTime.split('').map(function(ch) {
+        if (ch === '.' || ch === ',') {
+          return ch;
+        }
+        return nums[Number(ch)];
       });
-      let arrNumNe = nepTime
-        .toString()
-        .split('')
-        .map(function(ch) {
-          if (ch === '.' || ch === ',') {
-            return ch;
-          }
-          return nums[Number(ch)];
-        });
       return arrNumNe.join('');
     };
     const timeStr = currentNepaliTimeStr();

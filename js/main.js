@@ -77,10 +77,15 @@ const Weatherapp = (() => {
     const now = new Date();
     const baseTime = now.getTime();
     const englishTime = new Date(baseTime);
-    const currentTimeStr = englishTime.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+    let currentTimeStr = englishTime.toLocaleTimeString();
+    const timeArr = currentTimeStr.split(':');
+    timeArr[0] < 10 && timeArr[0] != 0
+      ? (currentTimeStr = `0${timeArr[0]}:${timeArr[1]} ${
+          timeArr[2].split(' ')[1]
+        }`)
+      : (currentTimeStr = `${timeArr[0]}:${timeArr[1]} ${
+          timeArr[2].split(' ')[1]
+        }`);
     $('.english-time').html(currentTimeStr);
   };
   return {
