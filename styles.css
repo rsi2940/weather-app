@@ -183,6 +183,9 @@ html {
     padding-top: 20px;
     width: 80%;
   }
+  .row2 {
+    margin-top: 20px;
+  }
   .row1 .weather-summary {
     padding-top: 10px;
     text-align: center;
