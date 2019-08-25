@@ -69,7 +69,7 @@ const NepaliDate = (() => {
       return arrNumNe.join('');
     };
     const timeStr = currentNepaliTimeStr();
-    const npt = `${timeStr[0]}${timeStr[1]} : ${timeStr[2]}${
+    const npt = `${timeStr[0]}${timeStr[1]}:${timeStr[2]}${
       timeStr[3]
     } ${amPM()}`;
     $('.nepali-time').html(npt);
