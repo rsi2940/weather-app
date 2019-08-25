@@ -227,6 +227,9 @@ html {
   .english-time {
     font-size: 1.5rem;
   }
+  .row2 {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   .powered-by {
