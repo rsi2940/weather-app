@@ -8,18 +8,6 @@ html {
   font-size: 30px;
   letter-spacing: 2px;
 }
-/* body {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#311847),
-    to(#3eb9e6)
-  );
-  background-image: -webkit-linear-gradient(top, #311847, #3eb9e6);
-  background-image: -moz-linear-gradient(top, #311847, #3eb9e6);
-  background-image: linear-gradient(to bottom, #311847, #3eb9e6);
-} */
 .container {
   min-height: 100vh;
   display: flex;
@@ -49,6 +37,8 @@ html {
   padding: 20px 20px 0;
   display: flex;
   justify-content: space-between;
+  animation-name: introduction;
+  animation-duration: 2s;
 }
 .english-date,
 .nepali-date {
@@ -221,6 +211,18 @@ html {
   }
   .powered-by .dark-sky {
     padding-top: 10px;
+  }
+  .nepali-date-time,
+  .english-date-time {
+    max-width: fit-content;
+  }
+  .english-date,
+  .nepali-date {
+    font-size: 1rem;
+  }
+  .nepali-time,
+  .english-time {
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
