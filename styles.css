@@ -72,12 +72,17 @@ html {
   animation-name: introduction;
   animation-duration: 2s;
 }
+.weather-box hr {
+  max-width: 900px;
+  min-width: 80%;
+  border-top-width: 2px solid white;
+}
 .row1 {
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
   padding-bottom: 15px;
 }
 .weather-summary {
@@ -179,9 +184,16 @@ html {
     font-size: 25px;
     line-height: 1.5;
   }
+  .weather-box > *:not(hr) {
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .row1 {
     padding-top: 20px;
     width: 80%;
+    flex-direction: column-reverse;
   }
   .row2 {
     margin-top: 20px;
@@ -200,9 +212,6 @@ html {
   .english-date-time {
     max-width: 25ch;
   }
-  .row1 {
-    flex-direction: column-reverse;
-  }
 }
 @media screen and (max-width: 420px) {
   html {
@@ -210,7 +219,6 @@ html {
   }
   .powered-by {
     flex-direction: column;
-    align-items: center;
   }
   .powered-by .dark-sky {
     padding-top: 10px;
