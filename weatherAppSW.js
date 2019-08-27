@@ -4,6 +4,7 @@ self.addEventListener('install', function(event) {
     caches.open('static').then(function(cache) {
       return cache
         .addAll([
+        '/',
           '/index.html',
           '/manifest.json',
           '/src/icons/favicon.ico',
