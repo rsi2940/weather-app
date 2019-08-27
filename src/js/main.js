@@ -94,9 +94,9 @@ const Weatherapp = (() => {
 })();
 $(document).ready(function() {
   console.log('init');
-  //register service worker
+  Weatherapp.init();
+});
+//register service worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/weatherAppSW.js');
   }
-  Weatherapp.init();
-});
