@@ -96,7 +96,7 @@ $(document).ready(function() {
   console.log('init');
   //register service worker
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../../weatherAppSW.js').then(() => {
+    navigator.serviceWorker.register('../../weatherAppSW.js').then(function () {
       console.log('Service Worker Registered!!');
     });
   }
