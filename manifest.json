@@ -4,8 +4,8 @@
   "theme_color": "#056775",
   "background_color": "#202020",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/index.html",
+  "scope": "/weather-app/",
+  "start_url": "/weather-app/index.html",
   "orientation": "portrait-primary",
   "icons": [
     {
