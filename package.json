@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Weather is app powered by DarkSky api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsi2940/weatherApp.git"
+  },
+  "author": "Rishi Khatiwada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsi2940/weatherApp/issues"
+  },
+  "homepage": "https://github.com/rsi2940/weatherApp#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

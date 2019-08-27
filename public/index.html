@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-129520119-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-129520119-2');
+    </script>
+    <!-- / Global site tag (gtag.js) - Google Analytics -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather and Nepali Date</title>
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/src/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- PWA icons and meta -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/src/icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/src/icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/src/icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/src/icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/src/icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/src/icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/src/icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/src/icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/src/icons/icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/src/icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta
+      name="msapplication-TileImage"
+      content="/src/icons/ms-icon-144x144.png"
+    />
+    <meta name="msapplication-TileColor" content="#056775" />
+    <meta name="theme-color" content="#056775" />
+    <!-- / PWA icons and meta -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="date-box">
+        <div class="nepali-date-time">
+          <p class="nepali-date align-center-tab">मिती</p>
+          <p class="nepali-time align-center-tab">समय</p>
+        </div>
+        <div class="english-date-time">
+          <p class="english-date align-right">Date</p>
+          <p class="english-time align-right">Time</p>
+        </div>
+      </div>
+      <div class="weather-box">
+        <div class="row1">
+          <h2 class="weather-summary text-shadow"></h2>
+          <canvas
+            class="weatherType"
+            id="icon1"
+            width="128"
+            height="128"
+          ></canvas>
+        </div>
+        <hr />
+        <div class="row2">
+          <h1 class="temp text-shadow"></h1>
+          <span class="temp-type text-shadow">°F</span>
+        </div>
+        <p class="weather-alert text-shadow">
+          no weather alert in your area
+        </p>
+        <p class="powered-by">
+          <a
+            class="text-shadow"
+            href="https://rishi.swamikeshavattri.com/"
+            target="_blank"
+            rel="noopener"
+            >Developed by Rishi Khatiwada</a
+          >
+          <a
+            class="dark-sky text-shadow"
+            href="https://darksky.net/poweredby/"
+            rel="noopener"
+            >Powered by Dark Sky</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="/src/js/skycons.js"></script>
+    <script src="/src/js/jquery-3.2.1.min.js"></script>
+    <script src="/src/js/main.js"></script>
+    <script src="/src/js/nepaliDate.js"></script>
+  </body>
+</html>
