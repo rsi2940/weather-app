@@ -6,7 +6,7 @@
   "display": "standalone",
   "scope": "/weather-app/",
   "start_url": "/weather-app/index.html",
-  "orientation": "any",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "./src/icons/icon-36x36.png",
