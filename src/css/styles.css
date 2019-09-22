@@ -38,7 +38,7 @@ html {
     rgba(0, 0, 0, 1) 80%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#056775",endColorstr="#000000",GradientType=1);
-backgrounds:#000;
+background:#000;
 }
 .date-box {
   width: 100%;
