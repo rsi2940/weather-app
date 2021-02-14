@@ -155,5 +155,11 @@
     <script src="src/js/jquery-3.2.1.min.js"></script>
     <script src="src/js/index.js"></script>
     <script src="src/js/nepaliDate.js"></script>
+    <script>
+      //register service worker
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('weatherAppSW.js');
+      }
+    </script>
   </body>
 </html>
