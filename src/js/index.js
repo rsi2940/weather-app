@@ -57,6 +57,7 @@ const Weatherapp = (() => {
     xhr.responseType = 'json';
     xhr.onload = () => {
       const data = xhr.response;
+      console.log(data);
       data.message && $('.weather-alert').html(`${alertTitle}`);
       let alertTitle = '';
       if (data.alerts) {
