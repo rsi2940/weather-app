@@ -14,6 +14,7 @@ self.addEventListener('install', function (event) {
           '/weather-app/src/css/styles.css',
           '/weather-app/src/js/jquery-3.2.1.min.js',
           '/weather-app/src/js/nepaliDate.js',
+          '/weather-app/src/index.js',
           'https://fonts.googleapis.com/css?family=Kelly+Slab&display=swap',
           'https://fonts.gstatic.com/s/kellyslab/v10/-W_7XJX0Rz3cxUnJC5t6fkQLfr8nfiI.woff2',
         ])
