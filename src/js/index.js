@@ -57,6 +57,7 @@ const Weatherapp = (() => {
     xhr.responseType = 'json';
     xhr.onload = () => {
       const data = xhr.response;
+      console.log(data);
       data.message && $('.weather-alert').html(`${alertTitle}`);
       let alertTitle = '';
       if (data.alerts) {
@@ -87,8 +88,7 @@ const Weatherapp = (() => {
       $('#icon1').attr('src', `src/weather-icons/${icon}.png`);
     };
     xhr.onerror = (e) => {
-      //   e = JSON.stringify(e);
-      $('.weather-alert').html('error ' + e);
+      $('.error').html('error: ' + e);
     };
     xhr.send();
   };
@@ -103,6 +103,6 @@ $(document).ready(function () {
   Weatherapp.init();
 });
 // register service worker
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/weatherAppSW.js');
-// }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/weatherAppSW.js');
+}
