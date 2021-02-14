@@ -8,7 +8,7 @@ html {
   font-family: 'Kelly Slab', sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
-  color: #888;
+  color: #afafaf;
   text-shadow: 0 0 25px black;
 }
 a {
@@ -21,7 +21,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: rgba(0, 0, 0, 0.85);
 }
 .date-box {
   width: 100%;
