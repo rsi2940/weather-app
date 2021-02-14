@@ -1,53 +1,32 @@
 * {
   padding: 0px;
   margin: 0px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html {
   font-family: 'Kelly Slab', sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+  color: #888;
+  text-shadow: 0 0 25px black;
+}
+a {
+  color: #888;
+  text-shadow: 0 0 25px black;
 }
 .container {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  background: rgb(5, 103, 117);
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(rgba(5, 103, 117, 1)),
-    color-stop(80%, rgba(0, 0, 0, 1))
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(5, 103, 117, 1) 0%,
-    rgba(0, 0, 0, 1) 80%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#056775",endColorstr="#000000",GradientType=1);
-background:#000;
+  background: black;
 }
 .date-box {
   width: 100%;
   padding: 20px 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-animation-name: introduction;
   animation-name: introduction;
@@ -56,13 +35,11 @@ background:#000;
 }
 .english-date,
 .nepali-date {
-  color: white;
   font-size: 1.75rem;
   letter-spacing: 2px;
 }
 .english-time,
 .nepali-time {
-  color: white;
   font-size: 4.25rem;
   letter-spacing: 2.5px;
 }
@@ -72,26 +49,15 @@ background:#000;
 .align-right {
   text-align: right;
 }
-.text-shadow {
+/* .text-shadow {
   text-shadow: 0 0 25px black;
-}
+} */
 .weather-box {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   -webkit-animation-name: introduction;
@@ -106,19 +72,12 @@ background:#000;
 }
 .row1 {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  /* border-bottom: 1px solid white; */
   padding-bottom: 15px;
 }
 .weather-summary {
-  color: white;
   font-size: 1.75rem;
 }
 
@@ -126,14 +85,8 @@ background:#000;
   width: 100px;
 }
 .row2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-top: 50px;
 }
@@ -144,53 +97,39 @@ background:#000;
   color: white;
 }
 .temp {
-  color: white;
   font-size: 2.6rem;
   cursor: pointer;
   pointer-events: auto;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
 .temp-type {
   color: #3eb9e6;
   font-size: 2.6rem;
   cursor: pointer;
-  -webkit-transition: color 1s;
   transition: color 1s;
 }
 .weather-alert {
   text-align: center;
-  color: white;
   text-transform: capitalize;
   font-size: 0.75rem;
   margin-top: 15px;
 }
 .weather-days {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding-top: 50px;
-  color: white;
   font-size: 0.7rem;
   width: 50%;
 }
 .powered-by {
-  color: white;
   padding: 10px;
   font-size: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 .powered-by a {
   text-decoration: none;
-  color: white;
 }
 @-webkit-keyframes introduction {
   0% {
@@ -218,18 +157,11 @@ background:#000;
     text-align: center;
   }
   .date-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   .row1 {
     width: 90%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }
@@ -249,25 +181,14 @@ background:#000;
     line-height: 1.5;
   }
   .weather-box > *:not(hr) {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 0px;
     flex: 1 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .row1 {
     padding-top: 20px;
     width: 80%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
   .row2 {
@@ -288,22 +209,13 @@ background:#000;
     max-width: 25ch;
   }
   .weather-box .powered-by {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 @media screen and (max-width: 620px) {
   html {
     font-size: 20px;
-  }
-
-  .powered-by .dark-sky {
-    padding-top: 10px;
   }
   .nepali-date-time,
   .english-date-time {
@@ -330,8 +242,6 @@ background:#000;
     right: 0px;
   }
   .weather-box {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     font-size: 30px;
   }
