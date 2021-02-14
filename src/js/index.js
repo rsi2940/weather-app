@@ -104,5 +104,5 @@ $(document).ready(function () {
 });
 // register service worker
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/weatherAppSW.js');
+  navigator.serviceWorker.register('/weather-app/weatherAppSW.js');
 }
