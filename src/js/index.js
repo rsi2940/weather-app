@@ -96,6 +96,6 @@ $(document).ready(function () {
   Weatherapp.init();
 });
 // register service worker
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/weatherAppSW.js');
-}
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker.register('/weatherAppSW.js');
+// }
