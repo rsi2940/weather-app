@@ -86,6 +86,9 @@ const Weatherapp = (() => {
       // set icon
       $('#icon1').attr('src', `src/weather-icons/${icon}.png`);
     };
+    xhr.onerror = (e) => {
+      $('.weather-alert').html(`${e}`);
+    };
     xhr.send();
   };
 
