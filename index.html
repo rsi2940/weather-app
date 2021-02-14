@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
+    <!-- <script 
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-129520119-2"
     ></script>
@@ -14,7 +14,7 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-129520119-2');
-    </script>
+    </script>-->
     <!-- / Global site tag (gtag.js) - Google Analytics -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -124,12 +124,13 @@
       <div class="weather-box">
         <div class="row1">
           <h2 class="weather-summary text-shadow"></h2>
-          <canvas
+          <img
             class="weatherType"
             id="icon1"
             width="128"
             height="128"
-          ></canvas>
+            src="src/weather-icons/11d.png"
+          ></img>
         </div>
         <hr />
         <div class="row2">
@@ -145,20 +146,13 @@
             href="https://rishi.swamikeshavattri.com/"
             target="_blank"
             rel="noopener"
-            >Developed by Rishi Khatiwada.</a
-          >
-          <a
-            class="dark-sky text-shadow"
-            href="https://darksky.net/poweredby/"
-            rel="noopener"
-            >Powered by Dark Sky</a
+            >Developed by Rishi Khatiwada</a
           >
         </p>
       </div>
     </div>
-    <script src="src/js/skycons.js"></script>
     <script src="src/js/jquery-3.2.1.min.js"></script>
-    <script src="src/js/main.js"></script>
+    <script src="src/js/index.js"></script>
     <script src="src/js/nepaliDate.js"></script>
   </body>
 </html>
