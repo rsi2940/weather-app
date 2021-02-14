@@ -40,6 +40,7 @@ const Weatherapp = (() => {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         data.message && $('.weather-alert').html(`${alertTitle}`);
         let alertTitle = '';
         if (data.alerts) {
@@ -68,6 +69,10 @@ const Weatherapp = (() => {
         });
         // set icon
         $('#icon1').attr('src', `src/weather-icons/${icon}.png`);
+      })
+      .catch((e) => {
+        console.log(e);
+        $('.weather-alert').html(`${e}`);
       });
   };
   // get the time
